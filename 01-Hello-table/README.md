@@ -19,7 +19,7 @@ Now that we have a function, we need to bring it to the cloud. First step is to 
 Now that we are logged in to the IBM Cloud, we do need to let the serverless.com OpenWhisk plugin know that we are connected to that space, to be able to deploy. You can do that by using the following command:
 * ```ibmcloud fn property get --auth```
 * ```ibmcloud fn property set --auth AUTHKEY```
-* ```See [namespace-settings](https://cloud.ibm.com/functions/namespace-settings) for the key.
+* ```See [namespace-settings](https://cloud.ibm.com/functions/namespace-settings) for the key.```
 Using this command a .wskprops file will be created in your user home directory. This will be used by the serverless.com cli to authenticate. So this step needs to be done every time you change the space / org.
 
 ## DEPLOY!
