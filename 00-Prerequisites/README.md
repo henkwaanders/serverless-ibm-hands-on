@@ -2,7 +2,7 @@
 Before beginning with the first example, we need to install some tools to be able to function. We will be using the command line, so begin with that is needed.
 
 ## 1. IBM Cloud login
-You can sign up for a free account at [cloud.ibm.com](https://ibm.biz/BdzJU2){target=_blank} If you do not already have one.
+You can sign up for a free account at [cloud.ibm.com](https://ibm.biz/BdzJU2){target=_blank rel="noopener"} If you do not already have one.
 Also make sure to create a space in a certain region, to create our functions in.
 
 ### 1a. Create a Space
