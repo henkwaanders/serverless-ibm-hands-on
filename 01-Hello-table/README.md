@@ -32,5 +32,5 @@ And see the magic happen!
 Go to [cloud function actions](https://cloud.ibm.com/functions/actions) to have a look at your action and play around with it. OR even better, invoke the function in the commandline to see it in action:
 * ```serverless invoke --function hello```
 * ```serverless invoke --function hello --data '{"name": "Table"}'```
-To see the logs you can use the folllowing command:
+* To see the logs you can use the folllowing command:
 ```serverless logs -f hello -t```
