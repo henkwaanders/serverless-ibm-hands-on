@@ -1,5 +1,5 @@
 # Hello Table
-In this hands on we will aspire to become the de-facto standard for everything related to table flipping. For that to become reality we need to start small, with a simple function :).
+In this hands-on on we will aspire to become the de-facto standard for everything related to table flipping. For that to become reality we need to start small, with a simple function :).
 
 ## Start a project
 We will use the serverless.com CLI to create a new project. Use the following commands to get started:

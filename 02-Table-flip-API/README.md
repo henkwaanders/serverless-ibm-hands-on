@@ -1,5 +1,5 @@
 # Table Flip API
-The second step is to actually create an API with parameters. Let's start with a simple one
+The second step is to actually create an API with parameters. Let's start with a simple one.
 
 ## What changed
 * serverless.yml now has an event
