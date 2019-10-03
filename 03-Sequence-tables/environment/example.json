@@ -1,0 +1,9 @@
+{
+  "namespace": "NAMESPACE",
+  "cloudant":{
+    "username": "CLOUDANT_USERNAME",
+    "password": "CLOUDANT_PASSWORD",
+    "dbname": "CLOUDANT_DB",
+    "host": "CLOUDANT_HOST"
+  }
+}
