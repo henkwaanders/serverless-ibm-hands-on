@@ -1,0 +1,55 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: 03-sequence-tables
+
+# Remember to install project dependencies to register the provider plugin.
+# $ npm install
+provider:
+  name: openwhisk
+  stage: dev
+  namespace: ${file(environment/${self:provider.stage}.json):namespace}
+
+resources:
+  packages:
+    tableFlipDB:
+      binding: /whisk.system/cloudant
+      parameters:
+        username: ${file(environment/${self:provider.stage}.json):cloudant.username}
+        password: ${file(environment/${self:provider.stage}.json):cloudant.password}
+        dbname: ${file(environment/${self:provider.stage}.json):cloudant.dbname}
+        host: ${file(environment/${self:provider.stage}.json):cloudant.host}
+
+functions:
+
+  tableflipPrepare:
+    handler: functions/tableflipPrepare.handler
+
+  tableflipResponse:
+    handler: functions/tableflipResponse.handler
+
+  tableflip-sequence:
+    sequence:
+      - tableflipPrepare
+      - /${self:provider.namespace}/tableFlipDB/read-document
+      - tableflipResponse
+    events:
+      - http:
+          path: /tableflip/{id}
+          method: GET
+          resp: http
+
+# extend the framework using plugins listed here:
+# https://github.com/serverless/plugins
+plugins:
+  - serverless-openwhisk
